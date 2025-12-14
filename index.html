@@ -19,52 +19,46 @@
             background-position: center;
             background-attachment: fixed;
             color: #333;
+            min-height: 100vh;
             position: relative;
         }
 
-        /* WHITE → CLEAR → BLACK FADE OVERLAY */
+        /* FADED BACKGROUND OVERLAY */
         body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    background: 
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,0.95) 0%,
-            rgba(255,255,255,0.4) 15%,
-            rgba(255,255,255,0) 35%,
-            rgba(0,0,0,0) 65%,
-            rgba(0,0,0,0.45) 85%,
-            rgba(0,0,0,0.85) 100%
-        ),
-        rgba(0,0,0,0.35); /* <-- adds overall dark overlay */
-}
-
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background: rgba(255, 255, 255, 0.5); /* 50% faded */
+        }
 
         header,
-        footer,
-        .spacer,
-        .services-band {
+        section,
+        footer {
             position: relative;
+            z-index: 1;
         }
 
+        /* FULL WIDTH NAVBAR */
         header {
+            width: 100%;
             background: #f4e04d;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
             padding: 16px 28px;
             position: sticky;
             top: 0;
-            z-index: 9999; /* ABOVE EVERYTHING */
+            z-index: 9999;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
+        /* LOGO SIZE LOCKED */
         header img {
-            height: 55px;
+            height: 70px;
+            width: 100px;
+            object-fit: contain;
         }
 
         nav ul {
@@ -86,11 +80,10 @@
             height: 200px;
         }
 
-        /* FULL-WIDTH SERVICES STRIP */
+        /* SERVICES BANNER */
         .services-band {
             background: white;
             padding: 40px 0;
-            z-index: 1;
         }
 
         .services-inner {
@@ -127,7 +120,7 @@
 <body>
 
 <header>
-    <img src="gipestcontrollogo.png" alt="G.I. Pest Control Logo">
+    <img src="gipestcontrollogonobg.png" alt="G.I. Pest Control Logo">
     <nav>
         <ul>
             <li><a href="#">About Us</a></li>
