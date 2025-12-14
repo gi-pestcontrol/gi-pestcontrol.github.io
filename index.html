@@ -47,7 +47,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 28px;
+            padding: 5px 26px; /* header padding */
             position: sticky;
             top: 0;
             z-index: 9999;
@@ -56,8 +56,8 @@
 
         /* LOGO SIZE LOCKED */
         header img {
-            height: 70px;
-            width: 100px;
+            height: 70px;   /* HEIGHT LOCKED */
+            width: 140px;   /* WIDTH LOCKED */
             object-fit: contain;
         }
 
@@ -93,7 +93,7 @@
         }
 
         .services-inner h2 {
-            color: #2e8b57;
+            color: #000;      /* black heading */
             margin-bottom: 18px;
             font-size: 1.7rem;
         }
@@ -101,7 +101,7 @@
         .services-inner ul {
             list-style: disc;
             padding-left: 22px;
-            font-size: 1.15rem;
+            font-size: 1rem;  /* smaller list text */
         }
 
         .services-inner li {
@@ -120,7 +120,9 @@
 <body>
 
 <header>
-    <img src="gipestcontrollogonobg.png" alt="G.I. Pest Control Logo">
+    <a href="index.html">
+        <img src="gipestcontrollogonobg.png" alt="G.I. Pest Control Logo">
+    </a>
     <nav>
         <ul>
             <li><a href="#">About Us</a></li>
